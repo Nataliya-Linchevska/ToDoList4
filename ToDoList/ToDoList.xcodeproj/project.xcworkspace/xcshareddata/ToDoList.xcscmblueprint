@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "312FF452CCE6645C2EC6957C047BAB498CD1C223",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "312FF452CCE6645C2EC6957C047BAB498CD1C223" : 9223372036854775807,
+    "37072768C9E53AEF61F92D003C83C80725B51028" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "908BE87E-67E1-46B0-AA3D-3559DDBFF5E4",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "312FF452CCE6645C2EC6957C047BAB498CD1C223" : "todo%20list%203\/",
+    "37072768C9E53AEF61F92D003C83C80725B51028" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ToDoList",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ToDoList\/ToDoList.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Nataliya-Linchevska\/ToDoList3",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "312FF452CCE6645C2EC6957C047BAB498CD1C223"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Nataliya-Linchevska\/Homework.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "37072768C9E53AEF61F92D003C83C80725B51028"
+    }
+  ]
+}
