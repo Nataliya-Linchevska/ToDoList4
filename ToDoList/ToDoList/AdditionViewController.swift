@@ -8,7 +8,9 @@
 
 import UIKit
 
+
 class AdditionViewController: UIViewController, SideBarDelegate {
+
     
     var sideBar: SideBar = SideBar()
     var index: Int?
@@ -36,6 +38,7 @@ class AdditionViewController: UIViewController, SideBarDelegate {
     
     @IBAction func btnSave(_ sender: UIBarButtonItem) {
         
+        FileHelper.writeToFirebase(task: TaskModel(name: tvEnterInformation.text, checked: switchDone.isOn))
         if index == nil {
             FileHelper.arrayOfTasks.append(TaskModel(name: tvEnterInformation.text, checked: switchDone.isOn))
         } else {

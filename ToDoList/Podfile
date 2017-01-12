@@ -6,6 +6,8 @@ target 'ToDoList' do
   use_frameworks!
 
   # Pods for ToDoList
+pod 'Firebase'
+pod 'Firebase/Database'
 pod 'Firebase/Core'
 
 end
