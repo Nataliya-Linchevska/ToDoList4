@@ -16,7 +16,7 @@ class FileHelper {
     
     static func writeToFirebase(task: TaskModel) {
         ref = FIRDatabase.database().reference()
-        self.ref.child("tasks").child(task.name).setValue(["data": task.data.description, "checked": task.checked])
+        self.ref.child("tasks").child(task.indexElement.description).setValue(["name": task.name, "data": task.data.description, "checked": task.checked])
     }
 
 }

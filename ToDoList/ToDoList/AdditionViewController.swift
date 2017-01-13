@@ -33,13 +33,17 @@ class AdditionViewController: UIViewController {
     
     @IBAction func btnSave(_ sender: UIBarButtonItem) {
         
-        FileHelper.writeToFirebase(task: TaskModel(name: tvEnterInformation.text, checked: switchDone.isOn))
-//        if index == nil {
-//            FileHelper.arrayOfTasks.append(TaskModel(name: tvEnterInformation.text, checked: switchDone.isOn))
-//        } else {
-//            FileHelper.arrayOfTasks[index!].name = tvEnterInformation.text
-//            FileHelper.arrayOfTasks[index!].checked = switchDone.isOn
-//        }
+
+        if index == nil {
+            index = 0
+            FileHelper.writeToFirebase(task: TaskModel(name: tvEnterInformation.text, checked: switchDone.isOn, indexElement: 0))
+            FileHelper.arrayOfTasks.append(TaskModel(name: tvEnterInformation.text, checked: switchDone.isOn, indexElement: 0))
+        } else {
+                    FileHelper.writeToFirebase(task: TaskModel(name: tvEnterInformation.text, checked: switchDone.isOn, indexElement: index!))
+            
+            FileHelper.arrayOfTasks[index!].name = tvEnterInformation.text
+            FileHelper.arrayOfTasks[index!].checked = switchDone.isOn
+        }
         
         tvEnterInformation.text = ""
         switchDone.isOn = true
