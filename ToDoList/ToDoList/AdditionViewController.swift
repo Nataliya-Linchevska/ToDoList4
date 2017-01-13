@@ -9,10 +9,8 @@
 import UIKit
 
 
-class AdditionViewController: UIViewController, SideBarDelegate {
+class AdditionViewController: UIViewController {
 
-    
-    var sideBar: SideBar = SideBar()
     var index: Int?
     
     @IBOutlet weak var tvEnterInformation: UITextView!
@@ -25,9 +23,6 @@ class AdditionViewController: UIViewController, SideBarDelegate {
             tvEnterInformation.text = FileHelper.arrayOfTasks[index!].name
             switchDone.setOn(FileHelper.arrayOfTasks[index!].checked, animated: false)
         }
-        
-        sideBar = SideBar(sourceView: self.view, menuItems: FileHelper.arrayOfItemsSideBar)
-        sideBar.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,24 +34,14 @@ class AdditionViewController: UIViewController, SideBarDelegate {
     @IBAction func btnSave(_ sender: UIBarButtonItem) {
         
         FileHelper.writeToFirebase(task: TaskModel(name: tvEnterInformation.text, checked: switchDone.isOn))
-        if index == nil {
-            FileHelper.arrayOfTasks.append(TaskModel(name: tvEnterInformation.text, checked: switchDone.isOn))
-        } else {
-            FileHelper.arrayOfTasks[index!].name = tvEnterInformation.text
-            FileHelper.arrayOfTasks[index!].checked = switchDone.isOn
-        }
+//        if index == nil {
+//            FileHelper.arrayOfTasks.append(TaskModel(name: tvEnterInformation.text, checked: switchDone.isOn))
+//        } else {
+//            FileHelper.arrayOfTasks[index!].name = tvEnterInformation.text
+//            FileHelper.arrayOfTasks[index!].checked = switchDone.isOn
+//        }
         
         tvEnterInformation.text = ""
         switchDone.isOn = true
-    }
-    
-    func sideBarDidSelectButtonAtIndex(_ index: Int) {
-        
-        if index == 0 {
-            self.navigationController?.popToRootViewController(animated: true)
-        } else if index == 1 {
-            let controller = storyboard?.instantiateViewController(withIdentifier: "copyrightView")
-            self.navigationController?.pushViewController(controller!, animated: true)
-        }
-    }
+    }    
 }

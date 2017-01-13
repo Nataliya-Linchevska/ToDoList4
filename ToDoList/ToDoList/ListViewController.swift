@@ -12,18 +12,13 @@ import UIKit
 
 //com.todolist.ios
 //pod 'Firebase/Core'
-class ListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, SideBarDelegate {
+class ListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-
-    
-    var sideBar: SideBar = SideBar()
 
     @IBOutlet weak var taskList: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        sideBar = SideBar(sourceView: self.view, menuItems: FileHelper.arrayOfItemsSideBar)
-        sideBar.delegate = self
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -99,15 +94,4 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         self.present(alert, animated: true, completion: nil)
     }
-    
-    func sideBarDidSelectButtonAtIndex(_ index: Int) {
-        
-        if index == 0 {
-            self.navigationController?.popToRootViewController(animated: true)
-        } else if index == 1 {
-            let controller = storyboard?.instantiateViewController(withIdentifier: "copyrightView")
-            self.navigationController?.pushViewController(controller!, animated: true)
-        }
-    }
-
 }

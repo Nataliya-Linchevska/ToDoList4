@@ -16,8 +16,6 @@
 		CE386A1B1E0FE68800E252F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE386A1A1E0FE68800E252F2 /* Assets.xcassets */; };
 		CE386A1E1E0FE68800E252F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE386A1C1E0FE68800E252F2 /* LaunchScreen.storyboard */; };
 		CE82CC761E28160B00F85938 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE82CC751E28160B00F85938 /* GoogleService-Info.plist */; };
-		CEBACC1C1E13F69000A62E88 /* SideBarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBACC1B1E13F69000A62E88 /* SideBarTableViewController.swift */; };
-		CEBACC1E1E13F6E700A62E88 /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBACC1D1E13F6E700A62E88 /* SideBar.swift */; };
 		D08ED86C63AB4A3DE8CEC77E /* Pods_ToDoList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C06265E07B3F71B085E6F58 /* Pods_ToDoList.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,8 +33,6 @@
 		CE386A1D1E0FE68800E252F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE386A1F1E0FE68800E252F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE82CC751E28160B00F85938 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		CEBACC1B1E13F69000A62E88 /* SideBarTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBarTableViewController.swift; sourceTree = "<group>"; };
-		CEBACC1D1E13F6E700A62E88 /* SideBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBar.swift; sourceTree = "<group>"; };
 		D22C97FDD69808ECED313546 /* Pods-ToDoList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDoList.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ToDoList/Pods-ToDoList.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,8 +84,6 @@
 				CE1D12DF1E119BE9002F5DBD /* TaskModel.swift */,
 				CE386A171E0FE68800E252F2 /* Main.storyboard */,
 				CE82CC751E28160B00F85938 /* GoogleService-Info.plist */,
-				CEBACC1D1E13F6E700A62E88 /* SideBar.swift */,
-				CEBACC1B1E13F69000A62E88 /* SideBarTableViewController.swift */,
 				CE386A1A1E0FE68800E252F2 /* Assets.xcassets */,
 				CE386A1C1E0FE68800E252F2 /* LaunchScreen.storyboard */,
 				CE386A1F1E0FE68800E252F2 /* Info.plist */,
@@ -232,10 +226,8 @@
 			files = (
 				CE1D12DE1E119AD9002F5DBD /* AdditionViewController.swift in Sources */,
 				CE1D12DC1E119AC2002F5DBD /* ListViewController.swift in Sources */,
-				CEBACC1E1E13F6E700A62E88 /* SideBar.swift in Sources */,
 				CE1D12E01E119BE9002F5DBD /* TaskModel.swift in Sources */,
 				CE386A141E0FE68800E252F2 /* AppDelegate.swift in Sources */,
-				CEBACC1C1E13F69000A62E88 /* SideBarTableViewController.swift in Sources */,
 				CE1D12E21E11A508002F5DBD /* FileHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
