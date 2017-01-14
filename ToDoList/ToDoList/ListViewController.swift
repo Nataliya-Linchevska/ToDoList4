@@ -19,6 +19,8 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        FileHelper.getTasksFromFirebase()
+        
         taskList.reloadData()
     }
 
@@ -60,7 +62,8 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let controller = storyboard?.instantiateViewController(withIdentifier: "EditView") as! AdditionViewController
-        controller.index = indexPath.row
+        controller.isNewTask = false
+        controller.task = FileHelper.arrayOfTasks[indexPath.row]
         self.navigationController?.pushViewController(controller, animated: true)
         
     }
