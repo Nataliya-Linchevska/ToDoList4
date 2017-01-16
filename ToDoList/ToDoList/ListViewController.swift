@@ -53,7 +53,9 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         if editingStyle == .delete {
             FileHelper.deleteTasksFromFirebase(dataForDelete: FileHelper.arrayOfTasks[indexPath.row].data.description)
-            tableView.deleteRows(at: [indexPath as IndexPath], with: .fade)
+            FileHelper.getTasksFromFirebase {
+                self.taskList.reloadData()
+            }
         }
     }
     
@@ -64,7 +66,6 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         controller.isNewTask = false
         controller.task = FileHelper.arrayOfTasks[indexPath.row]
         self.navigationController?.pushViewController(controller, animated: true)
-        
     }
     
     @IBAction func btnActionMenu(_ sender: UIBarButtonItem) {
@@ -85,11 +86,9 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         // Відміна
         let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel) {(ACTION) in}
-        
         alert.addAction(nameAction)
         alert.addAction(dataAction)
         alert.addAction(cancelAction)
-        
         self.present(alert, animated: true, completion: nil)
     }
 }

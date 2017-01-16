@@ -34,7 +34,6 @@ class AdditionViewController: UIViewController {
     
     @IBAction func btnSave(_ sender: UIBarButtonItem) {
         
-
         if isNewTask {
             FileHelper.writeToFirebase(task: TaskModel(name: tvEnterInformation.text, checked: switchDone.isOn))
         } else {
