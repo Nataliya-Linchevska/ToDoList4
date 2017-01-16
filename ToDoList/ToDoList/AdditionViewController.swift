@@ -41,8 +41,6 @@ class AdditionViewController: UIViewController {
             task.name = tvEnterInformation.text
             task.checked = switchDone.isOn
             FileHelper.writeToFirebase(task: task)
-            
-            
         }
         
         tvEnterInformation.text = ""

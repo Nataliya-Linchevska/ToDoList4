@@ -19,9 +19,9 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        FileHelper.getTasksFromFirebase()
-        
-        taskList.reloadData()
+        FileHelper.getTasksFromFirebase { 
+            self.taskList.reloadData()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,9 +52,8 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         
         if editingStyle == .delete {
-            FileHelper.arrayOfTasks.remove(at: indexPath.row)
+            FileHelper.deleteTasksFromFirebase(dataForDelete: FileHelper.arrayOfTasks[indexPath.row].data.description)
             tableView.deleteRows(at: [indexPath as IndexPath], with: .fade)
-            
         }
     }
     
