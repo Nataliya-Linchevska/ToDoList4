@@ -20,6 +20,7 @@ class FileHelper {
     }
     
     static func getTasksFromFirebase(callback: @escaping ()->()) {
+        arrayOfTasks.removeAll()
         ref = FIRDatabase.database().reference()
         self.ref.child("tasks").observeSingleEvent(of: .value, with: { (snapshot) in
             for items in snapshot.children {
