@@ -25,16 +25,13 @@ class FileHelper {
         self.ref.child("tasks").observeSingleEvent(of: .value, with: { (snapshot) in
             for items in snapshot.children {
                 let tasksInFirebase = (items as! FIRDataSnapshot).value as! NSDictionary
-//                print(tasksInFirebase)
                 let name = tasksInFirebase["name"] as! String
                 let checked = tasksInFirebase["checked"] as! Bool
                 let data = tasksInFirebase["data"] as! String
                 let task = TaskModel(name: name, checked: checked, data: data)
                 arrayOfTasks.append(task)
-                callback()
-//                print(arrayOfTasks)
-                
             }
+            callback()
         }) { (error) in
             print(error.localizedDescription)
         }
