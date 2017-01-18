@@ -9,5 +9,6 @@ target 'ToDoList' do
 pod 'Firebase'
 pod 'Firebase/Database'
 pod 'Firebase/Core'
+pod 'SideMenu'
 
 end

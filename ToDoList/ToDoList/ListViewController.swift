@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SideMenu
 
 class ListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -14,6 +15,16 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var taskList: UITableView!
     
     override func viewDidLoad() {
+//  До бібліотеки SideMenu
+        let menuLeftNavigationController = storyboard!.instantiateViewController(withIdentifier: "LeftMenuNavigationController") as? UISideMenuNavigationController
+        menuLeftNavigationController?.leftSide = true
+        
+        SideMenuManager.menuLeftNavigationController = menuLeftNavigationController
+//        let menuRightNavigationController = UISideMenuNavigationController()
+//        SideMenuManager.menuRightNavigationController = menuRightNavigationController
+        SideMenuManager.menuAddPanGestureToPresent(toView: self.navigationController!.navigationBar)
+        SideMenuManager.menuAddScreenEdgePanGesturesToPresent(toView: self.navigationController!.view)
+        
         super.viewDidLoad()
     }
     

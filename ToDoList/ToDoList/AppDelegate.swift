@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+//import SideMenu
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
